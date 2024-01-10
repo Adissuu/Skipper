@@ -1,0 +1,48 @@
+{
+    "Summer 2024": [
+        {
+            "jobId": 1,
+            "jobTitle": "Job Title 1",
+            "companyName": "Company Name 1",
+            "applicationDate": "2024-06-01"
+        },
+        {
+            "jobId": 2,
+            "jobTitle": "Job Title 2",
+            "companyName": "Company Name 2",
+            "applicationDate": "2024-07-01"
+        },
+        {
+            "jobId": 3,
+            "jobTitle": "Job Title 3",
+            "companyName": "Company Name 3",
+            "applicationDate": "2024-08-01"
+        }
+    ],
+    "Fall 2024": [
+        {
+            "jobId": 4,
+            "jobTitle": "Job Title 4",
+            "companyName": "Company Name 4",
+            "applicationDate": "2024-09-01"
+        },
+        {
+            "jobId": 5,
+            "jobTitle": "Job Title 5",
+            "companyName": "Company Name 5",
+            "applicationDate": "2024-10-01"
+        },
+        {
+            "jobId": 6,
+            "jobTitle": "Job Title 6",
+            "companyName": "Company Name 6",
+            "applicationDate": "2024-11-01"
+        },
+        {
+            "jobId": 7,
+            "jobTitle": "Job Title 7",
+            "companyName": "Company Name 7",
+            "applicationDate": "2024-12-01"
+        }
+    ]
+}
