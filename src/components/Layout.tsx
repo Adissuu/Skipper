@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import Display from './Display';
 
-export default function Layout(props: { children: React.ReactNode }) {
+export default function Layout() {
     const [display, setDisplay] = useState(() => {
         if (typeof window !== 'undefined') {
             return JSON.parse(localStorage.getItem('display') as string) ?? true;
@@ -19,7 +19,7 @@ export default function Layout(props: { children: React.ReactNode }) {
         console.log(display)
     });
     return (
-        <div className="flex relative items-stretch flex-grow overflow-x-hidden min-h-screen bg-orange-900">
+        <div className="flex relative items-stretch flex-grow overflow-x-hidden min-h-screen bg-gray-900">
             <Sidebar display={display} setDisplay={setDisplay} />
             <Display display={display} />
         </div>

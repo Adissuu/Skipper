@@ -1,5 +1,6 @@
-
-
+import Image from "next/image";
+import { PiExport } from "react-icons/pi";
+import { BiImport } from "react-icons/bi";
 function Sidebar({ display, setDisplay }: { display: Boolean, setDisplay: React.Dispatch<React.SetStateAction<any>> }) {
     const toggleDisplay = () => {
         setDisplay((prevDisplay: Boolean) => !prevDisplay);
@@ -10,10 +11,14 @@ function Sidebar({ display, setDisplay }: { display: Boolean, setDisplay: React.
             <div className={"relative w-12 z-50 bg-[#101318] h-screen bg-green-500 "}>
                 <div className="flex flex-col items-center justify-between h-full py-2">
                     {/* Export Button */}
-                    <button onClick={() => console.log("Export")}>Exp</button>
+                    <button onClick={() => console.log("Export")} className="text-xl">
+                        <PiExport />
+                    </button>
 
                     {/* Import Button */}
-                    <button onClick={() => console.log("Import")}>Imp</button>
+                    <button onClick={() => console.log("Import")} className="text-xl">
+                        <BiImport />
+                    </button>
 
                     {/* Trophy Icon with Confirmation */}
                     <button onClick={() => {
