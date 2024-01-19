@@ -4,7 +4,7 @@ import { ColumnDef } from "@tanstack/react-table"
 export type JobApplication = {
     id: string
     jobTitle: string
-    status: "Applied" | "Referred" | "Online Assesment" | "Follow-up" | "Interview" | "Offer"
+    status: "Applied" | "Referred" | "Online Assesment" | "Follow-up" | "Interview" | "Offer" | "Rejected"
     location: string
     employer: string
     payRate: number
@@ -13,15 +13,18 @@ export type JobApplication = {
     referred: boolean
 }
 
+function formatDate(date: Date) {
+    return date.toLocaleDateString()
+}
 
 export const columns: ColumnDef<JobApplication>[] = [
     {
-        accessorKey: 'jobTitle',
-        header: 'Job Title',
-    },
-    {
         accessorKey: 'status',
         header: 'Status',
+    },
+    {
+        accessorKey: 'jobTitle',
+        header: 'Job Title',
     },
     {
         accessorKey: 'location',
@@ -38,10 +41,17 @@ export const columns: ColumnDef<JobApplication>[] = [
     {
         accessorKey: 'dateApplied',
         header: 'Date Applied',
+        cell: ({ row }) => {
+            return <span>{formatDate(row.getValue("dateApplied"))}</span>;
+        }
+
     },
     {
         accessorKey: 'dateFollowUp',
         header: 'Date Follow Up',
+        cell: ({ row }) => {
+            return <span>{formatDate(row.getValue("dateFollowUp"))}</span>;
+        }
     },
     {
         accessorKey: 'referred',

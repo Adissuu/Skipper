@@ -17,6 +17,17 @@ async function getJobApplications(): Promise<JobApplication[]> {
             dateFollowUp: new Date("2021-01-01"),
             referred: false,
         },
+        {
+            id: "728ed52b",
+            jobTitle: "Software Engineer",
+            status: "Online Assesment",
+            location: "New York City, NY",
+            employer: "Meta",
+            payRate: 110000,
+            dateApplied: new Date("2022-01-01"),
+            dateFollowUp: new Date("2022-01-07"),
+            referred: true,
+        },
         // ...
     ]
 }
